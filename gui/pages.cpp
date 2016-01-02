@@ -690,9 +690,9 @@ int PageSet::LoadLanguage(char* languageFile, ZipArchive* package)
 	int ret = 0;
 
 	if (languageFile) {
-		printf("parsing languageFile\n");
+		LOGINFO("Parsing languageFile...");
 		lang.parse<0>(languageFile);
-		printf("parsing languageFile done\n");
+		printf(" done\n");
 	} else {
 		return -1;
 	}
