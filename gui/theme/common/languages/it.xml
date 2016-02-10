@@ -508,7 +508,7 @@
 		<string name="restore_part_done">[{1} fatto ({2} secondi)]</string>
 		<string name="verifying_md5">Verifica MD5</string>
 		<string name="skip_md5">Salta la verifica MD5 del ripristino sulla base delle impostazioni utente.</string>
-		<string name="calc_restore">Calcolo ripristino dati>
+		<string name="calc_restore">Calcolo ripristino dati</string>
 		<string name="restore_read_only">Ripristino Impossibile {1} -- montato in sola lettura.</string>
 		<string name="restore_unable_locate">Impossibile trovare'{1}' partizione per il ripristino.</string>
 		<string name="no_part_restore">Nessuna partizione selezionata per il ripristino.</string>
