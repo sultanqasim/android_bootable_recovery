@@ -2,9 +2,9 @@
 <recovery>
 	<details>
 		<resolution width="1080" height="1920"/>
-		<author>TeamWin</author>
-		<title>Backup Naowz</title>
-		<description>Default basic theme</description>
+		<author>sultanqasim</author>
+		<title>Dark green material</title>
+		<description>Dark green theme with background</description>
 		<preview>preview.png</preview>
 		<themeversion>1</themeversion>
 	</details>
@@ -23,6 +23,7 @@
 		<font name="keylabel-small" filename="RobotoCondensed-Regular.ttf" size="46"/>
 		<font name="keylabel-longpress" filename="RobotoCondensed-Regular.ttf" size="32"/>
 
+		<image name="bg_img" filename="background" retainaspect="1"/>
 		<image name="logo" filename="logo" retainaspect="1"/>
 		<image name="main_button" filename="main_button"/>
 		<image name="main_button_half_height" filename="main_button_half_height"/>
@@ -174,9 +175,9 @@
 		<variable name="navbar_btn_y" value="1856"/>
 		<variable name="keyboard_y" value="1149"/>
 		<variable name="keyboard_terminal_y" value="1053"/>
-		<variable name="background_color" value="#1A1A1A"/>
-		<variable name="accent_color" value="#0090CA"/>
-		<variable name="accent_color_semitransparent" value="#0090CA30"/>
+		<variable name="background_color" value="#0B0B0B"/>
+		<variable name="accent_color" value="#006020"/>
+		<variable name="accent_bgcolor" value="#00000040"/>
 		<variable name="text_color" value="#EEEEEE"/>
 		<variable name="text_button_color" value="#EEEEEE"/>
 		<variable name="text_success_color" value="#76FF03"/>
@@ -187,9 +188,9 @@
 		<variable name="semi_transparent" value="#00000099"/>
 		<variable name="warning" value="#F8F8A0"/>
 		<variable name="error" value="#FF0101"/>
-		<variable name="highlight" value="#0090CA"/>
-		<variable name="fileselector_linecolor" value="#555555"/>
-		<variable name="fileselector_highlight_color" value="#555555"/>
+		<variable name="highlight" value="#006020"/>
+		<variable name="fileselector_linecolor" value="#404040"/>
+		<variable name="fileselector_highlight_color" value="#404040"/>
 		<variable name="fileselector_separatorheight" value="2"/>
 		<variable name="fileselector_spacing" value="0"/>
 		<variable name="fileselector_install_height" value="1152"/>
@@ -233,7 +234,12 @@
 		<template name="page">
 			<background color="%background_color%"/>
 
-			<fill color="%accent_color%">
+			<image>
+				<image resource="bg_img"/>
+				<placement x="0" y="0"/>
+			</image>
+
+			<fill color="%accent_bgcolor%">
 				<placement x="0" y="0" w="%screen_width%" h="%header_height%"/>
 			</fill>
 
@@ -291,7 +297,7 @@
 				<text>{@battery_pct=Battery: %tw_battery%}</text>
 			</text>
 
-			<fill color="#000000">
+			<fill color="%accent_bgcolor%">
 				<placement x="0" y="%navbar_y%" w="%screen_width%" h="%navbar_height%"/>
 			</fill>
 
@@ -477,7 +483,7 @@
 		</template>
 
 		<template name="tabs_backup">
-			<fill color="%accent_color%">
+			<fill color="%accent_bgcolor%">
 				<placement x="0" y="row1_y" w="%screen_width%" h="tab_height"/>
 			</fill>
 
@@ -495,7 +501,7 @@
 		</template>
 
 		<template name="tabs_settings">
-			<fill color="%accent_color%">
+			<fill color="%accent_bgcolor%">
 				<placement x="0" y="row1_y" w="%screen_width%" h="tab_height"/>
 			</fill>
 
@@ -575,7 +581,7 @@
 				<keylabel key="0:k:103" text="^" resource="kb_arrow_up"/>
 				<keylabel key="0:k:106" text="&gt;" resource="kb_arrow_right"/>
 				<highlight color="%highlight_color%"/>
-				<ctrlhighlight color="#0090CA80"/>
+				<ctrlhighlight color="%highlight%"/>
 				<layout1>
 					<keysize height="96" width="154"/>
 					<row1 key01="155:k:29" key02="155:c:27" long02=":c:3" key03="154:c:9" key04="154:k:105" key05="154:k:108" key06="154:k:103" key07="154:k:106"/>
