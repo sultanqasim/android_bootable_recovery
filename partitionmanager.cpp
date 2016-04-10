@@ -1291,6 +1291,7 @@ void TWPartitionManager::Update_System_Details(void) {
 	int data_size = 0;
 
 	gui_msg("update_part_details=Updating partition details...");
+	TWFunc::SetPerformanceMode(true);
 	for (iter = Partitions.begin(); iter != Partitions.end(); iter++) {
 		if ((*iter)->Can_Be_Mounted) {
 			(*iter)->Update_Size(true);
@@ -1350,6 +1351,7 @@ void TWPartitionManager::Update_System_Details(void) {
 			}
 		}
 	}
+	TWFunc::SetPerformanceMode(false);
 	gui_msg("update_part_details_done=...done");
 	DataManager::SetValue(TW_BACKUP_DATA_SIZE, data_size);
 	string current_storage_path = DataManager::GetCurrentStoragePath();
