@@ -20,8 +20,10 @@
 #include <time.h>
 #include <string>
 #include <sstream>
+#include <fstream>
 #include <cctype>
 #include <cutils/properties.h>
+#include <unistd.h>
 
 #include "variables.h"
 #include "data.hpp"

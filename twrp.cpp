@@ -47,7 +47,6 @@ extern "C" {
 #include "partitions.hpp"
 #include "openrecoveryscript.hpp"
 #include "variables.h"
-#include "twrpDU.hpp"
 #ifdef TW_USE_NEW_MINADBD
 #include "adb.h"
 #else
@@ -64,7 +63,6 @@ struct selabel_handle *selinux_handle;
 TWPartitionManager PartitionManager;
 int Log_Offset;
 bool datamedia;
-twrpDU du;
 
 static void Print_Prop(const char *key, const char *name, void *cookie) {
 	printf("%s=%s\n", key, name);
