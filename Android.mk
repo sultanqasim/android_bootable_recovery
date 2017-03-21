@@ -42,12 +42,6 @@ TWHTCD_PATH := $(TWRES_PATH)htcd/
 
 TARGET_RECOVERY_GUI := true
 
-ifneq ($(TW_DEVICE_VERSION),)
-    LOCAL_CFLAGS += -DTW_DEVICE_VERSION='"-$(TW_DEVICE_VERSION)"'
-else
-    LOCAL_CFLAGS += -DTW_DEVICE_VERSION='"-0"'
-endif
-
 LOCAL_SRC_FILES := \
     twrp.cpp \
     fixContexts.cpp \
