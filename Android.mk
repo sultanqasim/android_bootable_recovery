@@ -331,7 +331,7 @@ ifeq ($(TARGET_RECOVERY_QCOM_RTC_FIX),)
 else ifeq ($(TARGET_RECOVERY_QCOM_RTC_FIX),true)
     LOCAL_CFLAGS += -DQCOM_RTC_FIX
 endif
-ifneq ($(TW_NO_LEGACY_PROPS),)
+ifneq ($(TW_NO_LEGACY_PROPS),false)
 	LOCAL_CFLAGS += -DTW_NO_LEGACY_PROPS
 endif
 ifneq ($(wildcard bionic/libc/include/sys/capability.h),)
