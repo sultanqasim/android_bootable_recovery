@@ -33,6 +33,8 @@ ifneq (,$(filter $(PLATFORM_SDK_VERSION), 21 22))
     BOARD_SEPOLICY_UNION += twrp.te
 endif
 
+TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/cryptfs_hw
+
 include $(CLEAR_VARS)
 
 TWRES_PATH := /twres/
