@@ -831,6 +831,8 @@ void DataManager::SetDefaultValues()
 	LOGINFO("TW_NO_LEGACY_PROPS := true\n");
 #endif
 
+	mData.SetValue("tw_enable_adb_backup", "0");
+
 	pthread_mutex_unlock(&m_valuesLock);
 }
 
